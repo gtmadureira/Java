@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="276.0" prefWidth="257.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.gtmadureira.FXMLController">
+   <children>
+      <Label layoutX="19.0" layoutY="39.0" text="Ano de Nascimento" />
+      <Label layoutX="19.0" layoutY="186.0" text="Idade" />
+      <Label layoutX="19.0" layoutY="228.0" text="Situaçao" />
+      <TextField fx:id="txtAno" layoutX="182.0" layoutY="34.0" prefHeight="26.0" prefWidth="56.0" />
+      <Button fx:id="btnCalc" layoutX="126.0" layoutY="116.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Calcular Idade" />
+      <Label fx:id="lblIdade" layoutX="141.0" layoutY="186.0" text="0" />
+      <Label fx:id="lblSituacao" layoutX="141.0" layoutY="228.0" text="&lt;vazio&gt;" />
+   </children>
+</Pane>

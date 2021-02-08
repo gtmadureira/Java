@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>io.github.gtmadureira</groupId>
+  <artifactId>TiposPrimitivos</artifactId>
+  <version>j-06.01</version>
+  <packaging>jar</packaging>
+
+  <name>TiposPrimitivos</name>
+  <url>https://github.com/gtmadureira</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <mainClass>tiposprimitivos.App</mainClass>
+    <maven.compiler.release>11</maven.compiler.release>
+  </properties>
+
+  <organization>
+    <name>Gustavo Madureira @ GitHub</name>
+  </organization>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.1</version>
+      <scope>test</scope>
+    </dependency>
+        
+    <!-- <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-controls</artifactId>
+      <version>14</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-fxml</artifactId>
+      <version>14</version>
+    </dependency> -->
+
+  </dependencies>
+
+  <build>    
+
+      <plugins>        
+
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.1</version>
+          <configuration>
+            <source>11</source>
+            <target>11</target>
+          </configuration>
+        </plugin>
+
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0-M4</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.2.0</version>
+          <configuration>
+            <archive>
+              <manifestFile>MANIFEST.MF</manifestFile>
+              <index>true</index>
+                <manifest>
+                  <addClasspath>true</addClasspath>
+                </manifest>
+            </archive>
+          </configuration>
+        </plugin>
+
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>3.0.0-M1</version>
+        </plugin>
+
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>3.0.0-M1</version>
+        </plugin>
+
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.9.0</version>
+        </plugin>
+
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>3.1.2</version>
+          <executions>
+            <execution>
+              <id>unpack-dependencies</id>
+              <phase>package</phase>
+              <goals>
+                <goal>unpack-dependencies</goal>
+              </goals>
+              <configuration>
+                <excludeScope>system</excludeScope>
+                <excludeGroupIds>junit,org.mockito,org.hamcrest</excludeGroupIds>
+                <outputDirectory>${project.build.directory}/classes</outputDirectory>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+        <plugin>
+          <groupId>io.github.fvarrui</groupId>
+          <artifactId>javapackager</artifactId>
+          <version>0.9.7</version>
+          <executions>
+            <execution>
+              <phase>package</phase>
+              <goals>
+                <goal>package</goal>
+              </goals>
+              <configuration>
+                <mainClass>tiposprimitivos.App</mainClass>
+                <bundleJre>true</bundleJre>
+                <generateInstaller>true</generateInstaller>
+                <platform>auto</platform>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+      </plugins>    
+
+  </build>
+
+</project>

@@ -1,0 +1,29 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>run</actionName>
+            <goals>
+                <goal>clean</goal>
+                <goal>package</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
+            </goals>
+            <properties>
+                <runfx.args>-jar "${symbol_dollar}{project.build.directory}/${symbol_dollar}{project.build.finalName}.jar"</runfx.args>
+            </properties>
+        </action>
+        <action>
+            <actionName>debug</actionName>
+            <goals>
+                <goal>clean</goal>
+                <goal>package</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
+            </goals>
+            <properties>
+                <runfx.args>-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=${symbol_dollar}{jpda.address} -Dglass.disableGrab=true -jar "${symbol_dollar}{project.build.directory}/${symbol_dollar}{project.build.finalName}.jar"</runfx.args>
+                <jpda.listen>true</jpda.listen>
+            </properties>
+        </action>        
+    </actions>
