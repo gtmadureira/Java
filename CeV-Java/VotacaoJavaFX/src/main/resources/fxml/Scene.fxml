@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="211.0" prefWidth="255.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.gtmadureira.FXMLController">
+   <children>
+      <Label layoutX="16.0" layoutY="23.0" text="Ano de Nasc:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAno" alignment="BASELINE_CENTER" layoutX="133.0" layoutY="18.0" prefHeight="26.0" prefWidth="102.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnVoto" layoutX="61.0" layoutY="81.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="134.0" text="Posso Votar ?">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblResultado" layoutX="47.0" layoutY="175.0" text="Resultado">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblIdade" layoutX="47.0" layoutY="144.0" text="Idade">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

@@ -1,0 +1,13 @@
+{
+    "editor.wordWrap": "on",
+    
+    "code-runner.ignoreSelection": true,
+    "code-runner.runInTerminal": false,
+    "code-runner.fileDirectoryAsCwd": false,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "code-runner.showExecutionMessage": false,
+    "code-runner.executorMap": {
+        "java": "mkdir -p bin && cd src && javac $dir$fileName && cp -r * ../bin && find . -name '*.class' -type f -delete && cd .. && cd bin && find . -name '*.java' -type f -delete && trash-empty && java app.$fileNameWithoutExt && cd ..",        
+    }
+}

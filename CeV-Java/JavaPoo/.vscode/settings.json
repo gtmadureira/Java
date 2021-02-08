@@ -1,0 +1,22 @@
+{
+    "editor.wordWrap": "on",
+
+    "code-runner.ignoreSelection": true,
+    "code-runner.runInTerminal": false,
+    "code-runner.fileDirectoryAsCwd": true,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "code-runner.showExecutionMessage": false,
+    "code-runner.executorMap": {
+        "java": "echo Try using the built-in Run/Debug plug-in instead of the Code Runner plug-in. \n",        
+        "shellscript": "bash",        
+    },
+    "code-runner.executorMapByFileExtension": {
+        ".jar": "java -jar $fileName",        
+    },
+
+    "java.configuration.updateBuildConfiguration": "interactive",
+
+    "cSpell.enabled": false,
+    "cSpell.language": "en-US,pt-BR,pt,en,en-GB",
+}
